@@ -10,7 +10,4 @@ public interface IUtilisateurDao {
 	public Utilisateur getUtilisateurById(int userId);
 	public Utilisateur updateUtilisateur(Utilisateur user);
 	public void deleteUtilisateur(int userId);
-
-
-
 }

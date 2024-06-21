@@ -8,7 +8,7 @@ public class SingletonConnection {
 	static {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/gesuser1","moussa","passer");	
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+System.getenv("GESUSER_DB"),System.getenv("DB_USERNAME"),System.getenv("DB_PASSWORD"));	
 			if (connection != null) {
                 System.out.println("Connexion à la base de données réussie !");
 			}		

@@ -8,9 +8,9 @@ public class TestDao {
 
 	public static void main(String[] args) {
 		UtilisateurDaoImpl dao = new UtilisateurDaoImpl();
-		Utilisateur user1 = new Utilisateur("diop","salif","salif","passer");
+		Utilisateur user1 = new Utilisateur("diop","Lamine","lamine","passer");
 		dao.addUtilisateur(user1);
-//		dao.updateUtilisateur(user1);
+		dao.updateUtilisateur(user1);
 //		dao.deleteUtilisateur(4);
 		System.out.println(user1.toString());
 		/*

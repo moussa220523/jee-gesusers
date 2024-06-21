@@ -5,7 +5,6 @@ public class Utilisateur {
 	private int id;
 	private String nom,prenom,login,password;
 	
-	
 	public Utilisateur() {
 	}
 	public Utilisateur(int id, String nom, String prenom, String login, String password) {

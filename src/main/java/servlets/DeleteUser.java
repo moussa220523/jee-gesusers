@@ -6,7 +6,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import dao.UtilisateurDao;
 import dao.UtilisateurDaoImpl;
 
@@ -28,7 +27,6 @@ public class DeleteUser extends HttpServlet {
 
                 dao.deleteUtilisateur(userId);
 
-                
                 response.sendRedirect("list");
                 
             } catch (NumberFormatException e) {
@@ -36,7 +34,6 @@ public class DeleteUser extends HttpServlet {
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, "L'ID doit être un entier valide.");
             }
         } else {
-           
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "L'ID de l'utilisateur est manquant dans la requête.");
         }
     }

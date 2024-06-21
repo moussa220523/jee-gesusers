@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import beans.Utilisateur;
 
 public class UtilisateurDaoImpl implements IUtilisateurDao{
@@ -121,13 +120,10 @@ public class UtilisateurDaoImpl implements IUtilisateurDao{
 
             ps.setInt(1, userId);
 
-            // Exécuter la requête SQL
             int rowsAffected = ps.executeUpdate();
 
-            // Vérifier si la mise à jour a été effectuée avec succès
             if (rowsAffected > 0) {
                 System.out.println("L'utilisateur avec l'ID " + userId + " a été supprimé avec succès !");
-                // return true;
             } else {
                 System.out.println("Aucun utilisateur trouvé avec l'ID spécifié !");
             }
@@ -135,10 +131,5 @@ public class UtilisateurDaoImpl implements IUtilisateurDao{
             System.out.println("Erreur : Impossible de se connecter à la base de données ou de récupérer les données !");
             e.printStackTrace();
         } 
-        // return false;
     }
-    
-   
-
-
 }
